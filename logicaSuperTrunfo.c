@@ -17,7 +17,8 @@ float PIB1;
 int turistico1;
 float densidade1;
 float PIBpercapita1;
-int opcao;
+int resultado1, resultado2;
+char primeiroatributo, segundoatributo; 
 
 printf ("Digite o nome de um estado - uma letra de 'A' a 'H':");
 scanf ("%s", estado1);
@@ -103,22 +104,24 @@ printf("Carta 2\n");
     printf("Densidade demográfica: %.2f habitantes/km²\n", densidade2);
     printf("PIB per capita: %.2f mil reais\n", PIBpercapita2);
 
-printf ("Escolha uma das opções para comparar atributos:\n");
+printf ("Bem vindo ao jogo!\n")
+printf ("Escolha o primeiro atributos.\n");
 printf ("1. População\n");
 printf ("2. Área\n");
 printf ("3. PIB\n");
 printf ("4. Número de pontos turísticos\n");
 printf ("5. Densidade demográfica\n");
-scanf ("%d", &opcao);
+printf ("Escolha a comparação:\n");
+scanf ("%c", &primeiroatributo);
 
-printf ("Resultado comparação:\n");
-printf ("Nome das cidades: %s e %s\n", cidade1, cidade2);
 
-switch (opcao){
+
+switch (primeiroatributo){
     case 1:
 printf ("Comparação: Atributo população\n");
 printf("Carta 1 - %lu habitantes\n", populacao1);
 printf("Carta 2 - %lu habitantes\n", populacao2);
+// populacao1 >população2? Printf ("A Carta1 é a vencedora\n") : printf ("A carta2 é a vencedora\n;")
 if (populacao1 > populacao2){
     printf ("A carta 1 é a vencedora\n");
 } else if (populacao1 < populacao2) {
@@ -180,7 +183,12 @@ default:
         break;
 }
 
-   
+printf ("Resultado comparação:\n");
+printf ("Nome das cidades: %s e %s\n", cidade1, cidade2);
+printf ("Atributos escolhidos: %c e %c\n,primeiroatributo , segundoatributo");
+
+
+
 
     
    
