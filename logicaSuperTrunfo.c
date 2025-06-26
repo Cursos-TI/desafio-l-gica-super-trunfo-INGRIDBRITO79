@@ -104,88 +104,89 @@ printf("Carta 2\n");
     printf("Densidade demográfica: %.2f habitantes/km²\n", densidade2);
     printf("PIB per capita: %.2f mil reais\n", PIBpercapita2);
 
-printf ("Bem vindo ao jogo!\n")
+printf ("Bem vindo ao jogo!\n");
 printf ("Escolha o primeiro atributos.\n");
-printf ("1. População\n");
-printf ("2. Área\n");
-printf ("3. PIB\n");
-printf ("4. Número de pontos turísticos\n");
-printf ("5. Densidade demográfica\n");
-printf ("Escolha a comparação:\n");
+printf ("1.População\n");
+printf ("2.Área\n");
+printf ("3.PIB\n");
+printf ("4.Número de pontos turísticos\n");
+printf ("5.Densidade demográfica\n");
+printf ("Escolha a comparação: ");
 scanf ("%c", &primeiroatributo);
-
 
 
 switch (primeiroatributo){
     case 1:
-printf ("Comparação: Atributo população\n");
-printf("Carta 1 - %lu habitantes\n", populacao1);
-printf("Carta 2 - %lu habitantes\n", populacao2);
-// populacao1 >população2? Printf ("A Carta1 é a vencedora\n") : printf ("A carta2 é a vencedora\n;")
-if (populacao1 > populacao2){
-    printf ("A carta 1 é a vencedora\n");
-} else if (populacao1 < populacao2) {
-    printf ("A carta 2 é a vencedora\n");
-} else {
-    printf ("A carta 1 e a carta 2 empataram\n");
-}
+printf ("Você escolheu a opção população\n");
+resultado1 = populacao1 > populacao2? 1 : 0;
 break;
 case 2:
-printf ("Comparação: Atributo área\n");
-printf("Carta 1 - %.2f km²\n", area1);
-printf("Carta 2 - %.2f km²\n", area2); 
-if (area1 > area2){
-    printf ("A carta 1 é a vencedora\n");
-} else if (area1 < area2) {
-    printf ("A carta 2 é a vencedora\n");
-}else {
-    printf ("A carta 1 e a carta 2 empataram\n");
-}
-break;
-case 3: 
-printf ("Comparação: Atributo PIB\n");
-printf("Carta 1 - %.2f bilhões de reais\n", PIB1);
-printf("Carta 2 - %.2f bilhões de reais\n", PIB2);
-if (PIB1 > PIB2){
-    printf ("A carta 1 é a vencedora\n");
-} else if (PIB1 < PIB2) {
-    printf ("A carta 2 é a vencedora\n");
-}else {
-    printf ("A carta 1 e a carta 2 empataram\n");
-}
+printf ("Você escolheu a opção área\n");
+resultado1 = area1 > area2? 1 : 0;
+case 3:
+printf ("Você escolheu a opção PIB\n");
+resultado1 = PIB1 > PIB2? 1 : 0;
 break;
 case 4:
-printf ("Comparação: Atributo Número de pontos turisticos\n");
-printf("Carta 1 - %d pontos turísticos\n", turistico1);
-printf("Carta 2 - %d pontos turísticos\n", turisticos2);
-if (turistico1 > turisticos2){
-    printf ("A carta 1 é a vencedora\n");
-} else if (turistico1 < turisticos2) {
-    printf ("A carta 2 é a vencedora\n");
-}else {
-    printf ("A carta 1 e a carta 2 empataram\n");
-}
+printf ("Você escolheu a opção turisticos\n");
+resultado1 = turistico1 > turisticos2? 1 : 0;
 break;
 case 5:
-printf ("Comparação: Atributo densidade Demográfica\n");
-printf("Carta 1 - %.2f habitantes/km²\n", densidade1);
-printf("Carta 2 - %.2f habitantes/km²\n", densidade2);  
-if (densidade1 < densidade2){
-    printf ("A carta 1 é a vencedora\n");
-} else if (densidade1 > densidade2) {
-    printf ("A carta 2 é a vencedora\n");
-}else {
-    printf ("A carta 1 e a carta 2 empataram\n");
-}
+printf ("Você escolheu a opção densidade Demográfica\n");
+resultado1 = densidade1 > densidade2? 1 : 0;
 break;
 default:
         printf("Opção inválida. Por favor, escolha uma opção válida.\n");
         break;
 }
 
+printf ("Escolha o segundo atributos.\n");
+printf ("1.População\n");
+printf ("2.Área\n");
+printf ("3.PIB\n");
+printf ("4.Número de pontos turísticos\n");
+printf ("5.Densidade demográfica\n");
+printf ("Escolha a comparação: ");
+scanf ("%c", &segundoatributo);
+
+if (primeiroatributo == segundoatributo)
+{
+ printf ("Atenção: você deve escolher um atributo diferente do primeiro.\n");
+} else {
+    switch (segundoatributo){
+case 1:
+printf ("Você escolheu a opção população\n");
+resultado2 = populacao1 > populacao2? 1 : 0;
+break;
+case 2:
+printf ("Você escolheu a opção área\n");
+resultado2 = area1 > area2? 1 : 0;
+case 3:
+printf ("Você escolheu a opção PIB\n");
+resultado1 = PIB1 > PIB2? 1 : 0;
+break;
+case 4:
+printf ("Você escolheu a opção turisticos\n");
+resultado2 = turistico1 > turisticos2? 1 : 0;
+break;
+case 5:
+printf ("Você escolheu a opção densidade Demográfica\n");
+resultado2 = densidade1 > densidade2? 1 : 0;
+break;
+default:
+        printf("Opção inválida. Por favor, escolha uma opção válida.\n");
+        break;
+}
+
+
+}
+    
+   
+
 printf ("Resultado comparação:\n");
 printf ("Nome das cidades: %s e %s\n", cidade1, cidade2);
-printf ("Atributos escolhidos: %c e %c\n,primeiroatributo , segundoatributo");
+printf ("Atributos escolhidos: %c e %c\n",primeiroatributo , segundoatributo);
+
 
 
 
